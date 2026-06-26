@@ -1,0 +1,87 @@
+.platform-badges {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  padding: 0;
+}
+
+.platform-badges-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+}
+
+.platform-badges-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.platform-badges-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  user-select: none;
+}
+
+.platform-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-base);
+}
+
+.platform-badge-name {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Hover effects */
+.platform-badge-item:hover {
+  border-color: var(--platform-color);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--platform-color) 12%, transparent);
+}
+
+.platform-badge-item:hover .platform-badge-icon {
+  color: var(--platform-color);
+}
+
+.platform-badge-item:hover .platform-badge-name {
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .platform-badge-name {
+    display: none;
+  }
+
+  .platform-badges-container {
+    gap: var(--space-sm);
+    padding: 4px 10px;
+  }
+
+  .platform-badge-item {
+    padding: 4px;
+  }
+}
